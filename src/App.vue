@@ -5,7 +5,7 @@ import TheProfile from "./components/TheProfile.vue";
 </script>
 
 <template>
-  <div class="pt-14 pr-6 pb-14 pl-6 w-screen h-screen bg-blue-dark">
+  <div class="pt-14 pr-6 pb-14 pl-6 w-screen h-screen bg-blue-dark font-rubik">
     <TheProfile />
   </div>
 </template>

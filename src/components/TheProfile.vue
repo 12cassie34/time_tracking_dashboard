@@ -7,9 +7,9 @@
         alt="Jeremy"
       />
     </div>
-    <div class="flex-auto">
-      <div>Report for</div>
-      <div>Jeremy Robson</div>
+    <div class="flex-auto flex flex-col justify-center">
+      <div class="text-blue-pale_blue font-medium text-sm">Report for</div>
+      <div class="text-white text-lg font-light">Jeremy Robson</div>
     </div>
   </div>
 </template>
