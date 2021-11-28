@@ -1,3 +1,10 @@
+<script setup>
+const props = defineProps({
+  activity: Object
+})
+
+</script>
+
 <template>
   <div class="relative">
     <div class="rounded-2xl flow-root overflow-hidden bg-orange">
