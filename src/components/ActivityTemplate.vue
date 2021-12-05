@@ -8,7 +8,7 @@ const props = defineProps({
 </script>
 
 <template>
-  <div class="relative">
+  <div class="relative lg:pr-6">
     <div :class="props.bgColor" class="rounded-2xl flow-root overflow-hidden">
       <img
         class="mr-4 relative bottom-2.5 float-right"

@@ -7,39 +7,51 @@ import ActivityTemplate from "./components/ActivityTemplate.vue";
 
 <template>
   <div
-    class="pt-14 pr-6 pb-14 pl-6 w-screen h-screen font-rubik"
+    class="
+      pt-14
+      pr-6
+      pb-14
+      pl-6
+      w-screen
+      h-screen
+      font-rubik
+      lg:flex lg:justify-between lg:px-14 lg:h-screen
+    "
   >
     <TheProfile />
-    <ActivityTemplate
-      title="Work"
-      :activity="activitiesAndTime['work']"
-      bgColor="bg-orange"
-    />
-    <ActivityTemplate
-      title="Play"
-      :activity="activitiesAndTime['play']"
-      bgColor="bg-blue-light"
-    />
-    <ActivityTemplate
-      title="Study"
-      :activity="activitiesAndTime['study']"
-      bgColor="bg-red"
-    />
-    <ActivityTemplate
-      title="Exercise"
-      :activity="activitiesAndTime['exercise']"
-      bgColor="bg-green"
-    />
-    <ActivityTemplate
-      title="Social"
-      :activity="activitiesAndTime['social']"
-      bgColor="bg-violet"
-    />
-    <ActivityTemplate
-      title="Self Care"
-      :activity="activitiesAndTime['self care']"
-      bgColor="bg-yellow"
-    />
+    <div class="lg:grid lg:grid-cols-3">
+      <ActivityTemplate
+        title="Work"
+        :activity="activitiesAndTime['work']"
+        bgColor="bg-orange"
+      />
+
+      <ActivityTemplate
+        title="Play"
+        :activity="activitiesAndTime['play']"
+        bgColor="bg-blue-light"
+      />
+      <ActivityTemplate
+        title="Study"
+        :activity="activitiesAndTime['study']"
+        bgColor="bg-red"
+      />
+      <ActivityTemplate
+        title="Exercise"
+        :activity="activitiesAndTime['exercise']"
+        bgColor="bg-green"
+      />
+      <ActivityTemplate
+        title="Social"
+        :activity="activitiesAndTime['social']"
+        bgColor="bg-violet"
+      />
+      <ActivityTemplate
+        title="Self Care"
+        :activity="activitiesAndTime['self care']"
+        bgColor="bg-yellow"
+      />
+    </div>
   </div>
 </template>
 
