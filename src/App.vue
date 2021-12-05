@@ -10,7 +10,7 @@ import ActivityTemplate from "./components/ActivityTemplate.vue";
     class="pt-14 pr-6 pb-14 pl-6 w-screen h-screen bg-blue-vary_dark font-rubik"
   >
     <TheProfile />
-    <ActivityTemplate :activity="activitiesAndTime['work']" />
+    <ActivityTemplate title="Work" :activity="activitiesAndTime['work']" bgColor="bg-orange" />
   </div>
 </template>
 
