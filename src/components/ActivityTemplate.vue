@@ -3,13 +3,15 @@ const props = defineProps({
   title: String,
   activity: Object,
   bgColor: String,
-})
-
+});
 </script>
 
 <template>
-  <div class="relative lg:pr-6">
-    <div :class="props.bgColor" class="rounded-2xl flow-root overflow-hidden">
+  <div class="relative lg:pr-6 lg:h-5/6">
+    <div
+      :class="props.bgColor"
+      class="rounded-2xl flow-root overflow-hidden h-20"
+    >
       <img
         class="mr-4 relative bottom-2.5 float-right"
         :src="`../src/assets/${props.title}.svg`"
@@ -17,11 +19,19 @@ const props = defineProps({
       />
     </div>
     <div
-      class="info-container px-4 py-5 rounded-2xl grid grid-cols-2 bg-blue-dark"
+      class="
+        info-container
+        px-4
+        py-5
+        rounded-2xl
+        grid grid-cols-2
+        bg-blue-dark
+        lg:grid-cols-none
+      "
     >
       <div class="text-white">
         <div>{{ props.title }}</div>
-        <div class="font-light text-2xl">32 hrs</div>
+        <div class="font-light text-2xl lg:text-5xl lg:mt-7">32 hrs</div>
       </div>
       <div
         class="
@@ -29,10 +39,11 @@ const props = defineProps({
           justify-around
           items-end
           text-blue-desaturated_blue
+          lg:relative
         "
       >
-        <img class="" src="../assets/icon-ellipsis.svg" alt="ETC" />
-        <div class="text-sm">Last Week - 36hrs</div>
+        <img class="lg:absolute lg:bottom-20 lg:right-4" src="../assets/icon-ellipsis.svg" alt="ETC" />
+        <div class="text-sm lg:absolute lg:left-0">Last Week - 36hrs</div>
       </div>
     </div>
   </div>

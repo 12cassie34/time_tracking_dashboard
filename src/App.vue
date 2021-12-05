@@ -19,7 +19,7 @@ import ActivityTemplate from "./components/ActivityTemplate.vue";
     "
   >
     <TheProfile />
-    <div class="lg:grid lg:grid-cols-3">
+    <div class="lg:grid lg:grid-cols-3 lg:w-10/12">
       <ActivityTemplate
         title="Work"
         :activity="activitiesAndTime['work']"
