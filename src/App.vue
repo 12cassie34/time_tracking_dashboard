@@ -7,7 +7,7 @@ import ActivityTemplate from "./components/ActivityTemplate.vue";
 
 <template>
   <div
-    class="pt-14 pr-6 pb-14 pl-6 w-screen h-screen bg-blue-vary_dark font-rubik"
+    class="pt-14 pr-6 pb-14 pl-6 w-screen h-screen font-rubik"
   >
     <TheProfile />
     <ActivityTemplate
@@ -140,4 +140,7 @@ export default {
 </script>
 
 <style>
+body {
+  background-color: hsl(226, 43%, 10%);
+}
 </style>
