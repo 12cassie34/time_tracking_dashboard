@@ -10,7 +10,36 @@ import ActivityTemplate from "./components/ActivityTemplate.vue";
     class="pt-14 pr-6 pb-14 pl-6 w-screen h-screen bg-blue-vary_dark font-rubik"
   >
     <TheProfile />
-    <ActivityTemplate title="Work" :activity="activitiesAndTime['work']" bgColor="bg-orange" />
+    <ActivityTemplate
+      title="Work"
+      :activity="activitiesAndTime['work']"
+      bgColor="bg-orange"
+    />
+    <ActivityTemplate
+      title="Play"
+      :activity="activitiesAndTime['play']"
+      bgColor="bg-blue-light"
+    />
+    <ActivityTemplate
+      title="Study"
+      :activity="activitiesAndTime['study']"
+      bgColor="bg-red"
+    />
+    <ActivityTemplate
+      title="Exercise"
+      :activity="activitiesAndTime['exercise']"
+      bgColor="bg-green"
+    />
+    <ActivityTemplate
+      title="Social"
+      :activity="activitiesAndTime['social']"
+      bgColor="bg-violet"
+    />
+    <ActivityTemplate
+      title="Self Care"
+      :activity="activitiesAndTime['self care']"
+      bgColor="bg-yellow"
+    />
   </div>
 </template>
 
@@ -92,8 +121,8 @@ export default {
         },
         "self care": {
           daily: {
-            current: .5,
-            last: .5,
+            current: 0.5,
+            last: 0.5,
           },
           weekly: {
             current: 2,
@@ -103,7 +132,7 @@ export default {
             current: 4,
             last: 4,
           },
-        }
+        },
       },
     };
   },

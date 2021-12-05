@@ -16,7 +16,7 @@ module.exports = {
         red: "hsl(348, 100%, 68%)",
         green: "hsl(145, 58%, 55%)",
         violet: "hsl(264, 64%, 52%)",
-        yello: "hsl(43, 84%, 65%)",
+        yellow: "hsl(43, 84%, 65%)",
       },
       fontFamily: {
         rubik: ['"Rubik"'],
