@@ -55,6 +55,21 @@ const props = defineProps({
   </div>
 </template>
 
+<script>
+import { ref, toRefs, watch } from 'vue';
+
+export default {
+  setup(props) {
+    const { timeRange } = toRefs(props);
+
+    watch(timeRange, () => {
+      console.log("TimeRange changed!")
+    })
+    
+  },
+}
+</script>
+
 <style scoped>
 .info-container {
   transform: translateY(-40px);

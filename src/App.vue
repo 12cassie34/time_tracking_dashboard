@@ -59,6 +59,8 @@ import ActivityTemplate from "./components/ActivityTemplate.vue";
 export default {
   data() {
     return {
+      selectedTimeRange: "Weekly",
+      timeRange: ["Daily", "Weekly", "Monthly"],
       activities: ["work", "play", "study", "exercise", "social", "self care"],
       activitiesAndTime: {
         work: {
