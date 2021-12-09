@@ -7,7 +7,7 @@ const props = defineProps({
 </script>
 
 <template>
-  <div class="relative lg:pr-6 lg:h-full">
+  <div class="card relative lg:mr-6">
     <div
       :class="props.bgColor"
       class="rounded-2xl flow-root overflow-hidden h-20"
@@ -43,11 +43,11 @@ const props = defineProps({
         "
       >
         <img
-          class="lg:absolute lg:bottom-20 lg:right-4"
+          class="lg:absolute lg:bottom-36 lg:right-4"
           src="../assets/icon-ellipsis.svg"
           alt="ETC"
         />
-        <div class="text-sm lg:absolute lg:left-0 lg:mt-9">
+        <div class="text-sm lg:absolute lg:left-0 lg:-mt-8">
           Last Week - 36hrs
         </div>
       </div>
@@ -60,9 +60,15 @@ const props = defineProps({
   transform: translateY(-40px);
 }
 
-/* @media (min-width: 1024px) {
-  .info-container {
-    height: 95%;
+@media (min-width: 1024px) {
+  .card:first-child, .card:nth-child(2), .card:nth-child(3) {
+    margin-bottom: 1.5rem;
   }
-} */
+  .info-container {
+    position: absolute;
+    bottom: 0rem;
+    width: 100%;
+    transform: unset;
+  }
+}
 </style>
