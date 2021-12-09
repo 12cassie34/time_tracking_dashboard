@@ -1,10 +1,4 @@
-<script setup>
-const props = defineProps({
-  title: String,
-  activity: Object,
-  bgColor: String,
-});
-</script>
+
 
 <template>
   <div class="card relative lg:mr-6">
@@ -51,20 +45,29 @@ const props = defineProps({
           Last Week - 36hrs
         </div>
       </div>
+      <button @click="test">test</button>
     </div>
   </div>
 </template>
 
 <script>
-import { ref, toRefs, watch } from 'vue';
+import { ref, toRefs, watch, onMounted } from 'vue';
+import { timeRangeStore } from '../stores/timeRangeStore.js';
 
 export default {
+  props: {
+     title: String,
+     activity: Object,
+     bgColor: String,
+  },
   setup(props) {
-    const { timeRange } = toRefs(props);
+    const store = timeRangeStore();
+    store.selectedTimeRange = "test";
 
-    watch(timeRange, () => {
-      console.log("TimeRange changed!")
-    })
+    return {
+      store,
+      props
+    }
     
   },
 }
