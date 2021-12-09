@@ -7,7 +7,7 @@ const props = defineProps({
 </script>
 
 <template>
-  <div class="relative lg:pr-6 lg:h-5/6">
+  <div class="relative lg:pr-6 lg:h-full">
     <div
       :class="props.bgColor"
       class="rounded-2xl flow-root overflow-hidden h-20"
@@ -26,7 +26,7 @@ const props = defineProps({
         rounded-2xl
         grid grid-cols-2
         bg-blue-dark
-        lg:grid-cols-none
+        lg:grid-cols-none lg:h-5/6
       "
     >
       <div class="text-white">
@@ -42,8 +42,14 @@ const props = defineProps({
           lg:relative
         "
       >
-        <img class="lg:absolute lg:bottom-20 lg:right-4" src="../assets/icon-ellipsis.svg" alt="ETC" />
-        <div class="text-sm lg:absolute lg:left-0">Last Week - 36hrs</div>
+        <img
+          class="lg:absolute lg:bottom-20 lg:right-4"
+          src="../assets/icon-ellipsis.svg"
+          alt="ETC"
+        />
+        <div class="text-sm lg:absolute lg:left-0 lg:mt-9">
+          Last Week - 36hrs
+        </div>
       </div>
     </div>
   </div>
@@ -53,4 +59,10 @@ const props = defineProps({
 .info-container {
   transform: translateY(-40px);
 }
+
+/* @media (min-width: 1024px) {
+  .info-container {
+    height: 95%;
+  }
+} */
 </style>
