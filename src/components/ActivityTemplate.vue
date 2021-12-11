@@ -25,7 +25,9 @@
     >
       <div class="text-white">
         <div>{{ props.title }}</div>
-        <div class="font-light text-2xl lg:text-5xl lg:mt-7">32 hrs</div>
+        <div class="font-light text-2xl lg:text-5xl lg:mt-7">
+          {{ props.activity[store.selectedTimeRange].current }}hrs
+        </div>
       </div>
       <div
         class="
@@ -42,35 +44,35 @@
           alt="ETC"
         />
         <div class="text-sm lg:absolute lg:left-0 lg:-mt-8">
-          Last Week - 36hrs
+          Last {{ store.selectedTimeUnit }} - {{ props.activity[store.selectedTimeRange].last }}hrs
         </div>
       </div>
-      <button @click="test">test</button>
     </div>
   </div>
 </template>
 
 <script>
-import { ref, toRefs, watch, onMounted } from 'vue';
-import { timeRangeStore } from '../stores/timeRangeStore.js';
+import { ref, toRefs, watchEffect, onMounted } from "vue";
+import { timeRangeStore } from "../stores/timeRangeStore.js";
 
 export default {
   props: {
-     title: String,
-     activity: Object,
-     bgColor: String,
+    title: String,
+    activity: Object,
+    bgColor: String,
   },
   setup(props) {
     const store = timeRangeStore();
-    store.selectedTimeRange = "test";
-
     return {
       store,
       props
-    }
-    
+    };
   },
-}
+  data() {
+    return {
+    }
+  },
+};
 </script>
 
 <style scoped>
@@ -79,7 +81,9 @@ export default {
 }
 
 @media (min-width: 1024px) {
-  .card:first-child, .card:nth-child(2), .card:nth-child(3) {
+  .card:first-child,
+  .card:nth-child(2),
+  .card:nth-child(3) {
     margin-bottom: 1.5rem;
   }
   .info-container {

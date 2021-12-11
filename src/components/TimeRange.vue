@@ -15,11 +15,11 @@
     <div class="grid grid-cols-3 gap-4 lg:flex lg:flex-col lg:items-baseline lg:py-4">
       <button
         @click="changeTimeRange(unit)"
-        v-for="(unit, index) in timeRange"
+        v-for="(unit, index) in store.timeRange"
         :key="index"
-        class="focus-bg-transparent"
+        class="focus-bg-transparent capitalize"
         :class="[
-          unit === selectedTimeRange
+          unit === store.selectedTimeRange
             ? 'text-white'
             : 'text-blue-desaturated_blue',
         ]"
@@ -31,17 +31,29 @@
 </template>
 
 <script>
+import { timeRangeStore } from '../stores/timeRangeStore.js';
+
 export default {
-  setup() {},
+  setup() {
+    const store = timeRangeStore();
+
+    return {
+      store
+    }
+  },
   data() {
     return {
-      selectedTimeRange: "Weekly",
-      timeRange: ["Daily", "Weekly", "Monthly"],
     };
   },
   methods: {
     changeTimeRange(timeRange) {
-      this.selectedTimeRange = timeRange;
+      const time_unit_hash = {
+        daily: "Day",
+        weekly: "Week",
+        monthly: "Month",
+      }
+      this.store.selectedTimeRange = timeRange;
+      this.store.selectedTimeUnit = time_unit_hash[timeRange];
     },
   },
 };
