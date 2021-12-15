@@ -52,11 +52,11 @@ To be added.
 - Use Pinia to store data
 
 ### Development Note
-[20211122 Time Tracking Dashboard](https://hackmd.io/@12Cassie34/SkPfmcOOK)
+#### [20211122 Time Tracking Dashboard](https://hackmd.io/@12Cassie34/SkPfmcOOK)
 - Initialize Vue 3 + vite project.
 - Add base style setting of color and font in `tailwind.config.js`.
 
-[20211122 Time Tracking Dashboard](https://hackmd.io/@12Cassie34/HJJUOEF_Y)
+#### [20211122 Time Tracking Dashboard](https://hackmd.io/@12Cassie34/HJJUOEF_Y)
 - Encounter `border-color` does not work. The problem is caused by overriding default Tailwind colors by putting colors directly into `theme.colors`. We should put our custom color setting in `extend`.
 ```js
 module.exports = {
@@ -74,7 +74,7 @@ module.exports = {
   }
 };
 ```
-[2021215 Time Tracking Dashboard](https://hackmd.io/@12Cassie34/SkfhpQvcY)
+#### [2021215 Time Tracking Dashboard](https://hackmd.io/@12Cassie34/SkfhpQvcY)
 - After running npm run build, some images did not reveal. Problem solved!
 ```js
   mounted() {
@@ -89,7 +89,7 @@ module.exports = {
   },
 ```
 
-[2021215 Time Tracking Dashboard](https://hackmd.io/@12Cassie34/SyHb5ZPcK)
+#### [2021215 Time Tracking Dashboard](https://hackmd.io/@12Cassie34/SyHb5ZPcK)
 - Deploy my project on Github Pages.
 
 
@@ -102,6 +102,8 @@ module.exports = {
 
 - [Border color doesn't work in Tailwind CSS](https://stackoverflow.com/questions/68320264/border-color-doesnt-work-in-tailwind-css) - The answer in this post saves my day when I try to figure out why my `border-white` does not work.
 - [Creating vite vue ts template: Deploy to Github Pages](https://dev.to/imomaliev/creating-vite-vue-ts-template-deploy-to-github-pages-4c88) - Clear instruction for deploying your Vue 3 + vite project on Github Pages. But don't forget to check vite's documents about deploying beforehand!
+- [CodePen Home
+CSS filter generator to convert from black to target hex color](https://codepen.io/sosuke/pen/Pjoqqp) - When it comes to changing a SVG image's color, I will recommend this site to get a right `filter`'s setting.
 
 ## Author
 
