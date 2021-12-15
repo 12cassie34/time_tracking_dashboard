@@ -8,7 +8,7 @@
     >
       <img
         class="mr-4 relative bottom-2.5 float-right"
-        :src="`../src/assets/${props.title}.svg`"
+        :id="`img-${props.title}`"
         :alt="props.title"
       />
     </div>
@@ -44,7 +44,8 @@
           alt="ETC"
         />
         <div class="text-sm lg:absolute lg:left-0 lg:-mt-8">
-          Last {{ store.selectedTimeUnit }} - {{ props.activity[store.selectedTimeRange].last }}hrs
+          Last {{ store.selectedTimeUnit }} -
+          {{ props.activity[store.selectedTimeRange].last }}hrs
         </div>
       </div>
     </div>
@@ -65,12 +66,21 @@ export default {
     const store = timeRangeStore();
     return {
       store,
-      props
+      props,
     };
   },
+  mounted() {
+    this.$nextTick(function () {
+      const imgUrl = new URL(
+        `../assets/${this.props.title}.svg`,
+        import.meta.url
+      ).href;
+
+      document.getElementById(`img-${this.props.title}`).src = imgUrl;
+    });
+  },
   data() {
-    return {
-    }
+    return {};
   },
 };
 </script>
