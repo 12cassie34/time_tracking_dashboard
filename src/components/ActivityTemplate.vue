@@ -39,7 +39,7 @@
         "
       >
         <img
-          class="lg:absolute lg:bottom-36 lg:right-4"
+          class="cursor-pointer lg:absolute lg:bottom-36 lg:right-4"
           src="../assets/icon-ellipsis.svg"
           alt="ETC"
         />
@@ -88,6 +88,9 @@ export default {
 <style scoped>
 .info-container {
   transform: translateY(-40px);
+}
+img:hover {
+  filter: invert(72%) sepia(17%) saturate(1644%) hue-rotate(160deg) brightness(97%) contrast(85%);
 }
 
 @media (min-width: 1024px) {

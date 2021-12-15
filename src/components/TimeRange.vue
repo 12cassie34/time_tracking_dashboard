@@ -17,7 +17,7 @@
         @click="changeTimeRange(unit)"
         v-for="(unit, index) in store.timeRange"
         :key="index"
-        class="focus-bg-transparent capitalize"
+        class="focus-bg-transparent capitalize hover:text-white"
         :class="[
           unit === store.selectedTimeRange
             ? 'text-white'
