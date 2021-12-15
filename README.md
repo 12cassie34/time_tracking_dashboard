@@ -74,6 +74,20 @@ module.exports = {
   }
 };
 ```
+[2021215 Time Tracking Dashboard](https://hackmd.io/@12Cassie34/SkfhpQvcY)
+- After running npm run build, some images did not reveal. Problem solved!
+```js
+  mounted() {
+    this.$nextTick(function () {
+      const imgUrl = new URL(
+        `../assets/${this.props.title}.svg`,
+        import.meta.url
+      ).href;
+
+      document.getElementById(`img-${this.props.title}`).src = imgUrl;
+    });
+  },
+```
 
 [2021215 Time Tracking Dashboard](https://hackmd.io/@12Cassie34/SyHb5ZPcK)
 - Deploy my project on Github Pages.
