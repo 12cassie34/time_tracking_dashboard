@@ -29,8 +29,10 @@ Users should be able to:
 
 ### Screenshot
 
-To be added.
-![](./screenshot.jpg)
+![Desktop](https://i.imgur.com/DFPRcQp.png)
+![Mobile-1](https://i.imgur.com/Hb9Wbqz.png)
+![Mobile-2](https://i.imgur.com/YhAlGjr.png)
+![Mobile-3](https://i.imgur.com/mQV0RV7.png)
 
 ### Links
 
