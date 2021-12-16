@@ -8,7 +8,6 @@
       z-0
       rounded-b-2xl
       bg-blue-dark
-      lg:h-1/3
     "
   >
     <div class="h-8 lg:hidden"></div>
@@ -63,6 +62,12 @@ export default {
 @media (min-width: 375px) and (max-width: 1023px) {
   .time-range-container {
     transform: translateY(-30px);
+  }
+}
+
+@media (min-width: 1024px) {
+  .time-range-container {
+    height: 30%;
   }
 }
 

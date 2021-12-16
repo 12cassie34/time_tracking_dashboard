@@ -6,6 +6,7 @@ import TimeRange from "./TimeRange.vue";
   <div class="lg:w-3/12 lg:mr-7">
     <div
       class="
+      profile
         px-6
         py-8
         relative
@@ -14,7 +15,6 @@ import TimeRange from "./TimeRange.vue";
         rounded-2xl
         flex
         lg:flex-col
-        lg:h-2/3
       "
     >
       <div class="flex-auto">
@@ -28,7 +28,7 @@ import TimeRange from "./TimeRange.vue";
         <div class="text-blue-pale_blue font-medium text-sm lg:text-lg">
           Report for
         </div>
-        <div class="text-white text-lg font-light lg:text-5xl">
+        <div class="text-white text-lg font-light break-words lg:text-5xl lg:w-80">
           Jeremy Robson
         </div>
       </div>
@@ -36,3 +36,11 @@ import TimeRange from "./TimeRange.vue";
     <TimeRange />
   </div>
 </template>
+
+<style scoped>
+@media (min-width: 1024px) {
+  .profile {
+    height: 70%;
+  }
+}
+</style>

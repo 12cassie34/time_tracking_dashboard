@@ -159,7 +159,7 @@ body {
 <style scoped>
 @media (min-width: 1024px) {
   .layout-container {
-    height: 28rem;
+    height: 32rem;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
