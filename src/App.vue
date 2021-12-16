@@ -8,14 +8,13 @@ import ActivityTemplate from "./components/ActivityTemplate.vue";
 <template>
   <div
     class="
-      pt-14
-      pr-6
-      pb-14
-      pl-6
+      layout-container
+      px-14
+      py-6
       w-screen
       h-screen
       font-rubik
-      lg:flex lg:justify-between lg:px-14 lg:h-screen
+      lg:flex lg:justify-between lg:px-14 lg:py-0
     "
   >
     <TheProfile />
@@ -154,5 +153,16 @@ export default {
 <style>
 body {
   background-color: hsl(226, 43%, 10%);
+}
+</style>
+
+<style scoped>
+@media (min-width: 1024px) {
+  .layout-container {
+    height: 28rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
 }
 </style>

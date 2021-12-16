@@ -39,7 +39,7 @@
         "
       >
         <img
-          class="cursor-pointer lg:absolute lg:bottom-36 lg:right-4"
+          class="cursor-pointer lg:absolute lg:bottom-32 lg:right-4"
           src="../assets/icon-ellipsis.svg"
           alt="ETC"
         />
@@ -53,7 +53,6 @@
 </template>
 
 <script>
-import { ref, toRefs, watchEffect, onMounted } from "vue";
 import { timeRangeStore } from "../stores/timeRangeStore.js";
 
 export default {
